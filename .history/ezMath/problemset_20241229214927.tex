@@ -1,0 +1,27 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+
+\usepackage[many]{tcolorbox}
+\newtcolorbox[auto counter,number within=section]{theorem}[2][]{%
+    colback=green!5,
+    colframe=green!35!black,
+    colbacktitle=green!35!black,
+    coltitle=white,
+    fonttitle=\bfseries, 
+    title=Theorem~\thetcbcounter.\ #2,
+    enhanced,
+    attach boxed title to top left={yshift=-2mm, xshift=0.5cm},%
+    #1% 
+}
+
+作者：lcs27
+链接：https://www.zhihu.com/question/577848283/answer/2838139091
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+\begin{document}
+
+
+
+\end{document}

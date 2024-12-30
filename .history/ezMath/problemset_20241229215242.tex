@@ -1,0 +1,27 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+
+\usepackage[many]{tcolorbox}
+\newtcolorbox[auto counter,number within=section]{problem}[2][]{%
+    colback=green!5,
+    colframe=green!35!black,
+    colbacktitle=green!35!black,
+    coltitle=white,
+    fonttitle=\bfseries, 
+    enhanced,
+    attach boxed title to top left={yshift=-2mm, xshift=0.5cm},%
+    #1% 
+}
+
+\begin{document}
+
+\begin{problem}{}
+    The sequence $\displaystyle \left\{ \frac{\tan n}{n} \right\}_{n \geq 1}$ is not bounded. 
+\end{problem}
+
+\begin{problem}{}
+    Prove or disprove: $\displaystyle \sum_{n = 1}^\infty $
+\end{problem}
+
+\end{document}

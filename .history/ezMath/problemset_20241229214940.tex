@@ -1,0 +1,27 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+
+\usepackage[many]{tcolorbox}
+\newtcolorbox[auto counter,number within=section]{theorem}[2][]{%
+    colback=green!5,
+    colframe=green!35!black,
+    colbacktitle=green!35!black,
+    coltitle=white,
+    fonttitle=\bfseries, 
+    title=Theorem~\thetcbcounter.\ #2,
+    enhanced,
+    attach boxed title to top left={yshift=-2mm, xshift=0.5cm},%
+    #1% 
+}
+
+\begin{document}
+
+\begin{theorem}{$L^p$ space}
+    A $L^p$ space is a space where $L^p$ norm is defined, which means that:
+\begin{equation}
+    \int_\Omega |f|^p d\mu<+\infty
+\end{equation}
+\end{theorem}
+
+\end{document}

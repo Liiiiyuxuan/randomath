@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+
+\usepackage[many]{tcolorbox}
+\newtcolorbox[auto counter,number within=section]{problem}[2][]{%
+    colback=green!5,
+    colframe=green!35!black,
+    colbacktitle=green!35!black,
+    coltitle=white,
+    fonttitle=\bfseries, 
+    enhanced,
+    attach boxed title to top left={yshift=-2mm, xshift=0.5cm},%
+    #1% 
+}
+
+\begin{document}
+
+\begin{center}
+    \textbf{Problem 1}
+\end{center}
+\begin{problem}{}
+    The sequence $\displaystyle \left\{ \frac{\tan n}{n} \right\}_{n \geq 1}$ is not bounded. 
+\end{problem}
+
+\vspace{.5cm}
+\begin{center}
+    \textbf{Problem 2}
+\end{center}
+\begin{problem}{}
+    Prove or disprove: $\displaystyle \sum_{n = 1}^\infty \frac{\sin (n \sqrt{n})}{\sqrt{n}}$ is convergent. 
+\end{problem}
+
+\vspace{.5cm}
+\begin{center}
+    \textbf{Problem 3}
+\end{center}
+\begin{problem}{}
+    Prove or disprove: $\displaystyle \sum_{n = 1}^\infty \frac{1}{n^3 \sin^2 n}$ is convergent. 
+\end{problem}
+
+\vspace{.5cm}
+\begin{center}
+    \textbf{Problem 4}
+\end{center}
+\begin{problem}{}
+    Evaluate: $\displaystyle \lim_{n \to }$
+\end{problem}
+
+\end{document}
