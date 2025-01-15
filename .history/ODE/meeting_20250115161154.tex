@@ -1,0 +1,66 @@
+\documentclass{article}
+% \synctex=1
+% \newcommand{\fix}[1]{{\bf *** #1 ***}}
+\usepackage{amsfonts, amsmath, comment, hyperref, fontawesome5}
+\usepackage{mathrsfs, amssymb, tikz-cd, booktabs, tcolorbox}
+\usepackage{stmaryrd, siunitx, lmodern, multirow, adjustbox}
+\usepackage{multirow, pifont, soul, tcolorbox, enumerate}
+\usepackage{latexsym, cancel, tikz, xcolor, url, color}
+\usepackage{siunitx, amsthm, multicol}
+\usepackage{enumitem,multicol,setspace}
+\usepackage{imakeidx, etoolbox}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\usepackage[OT2,OT1]{fontenc}
+\def\SH{\mbox{\fontencoding{OT2}\selectfont\char88}}
+
+\newcommand\blfootnote[1]{%
+    \begingroup
+    \renewcommand\thefootnote{}\footnote{#1}%
+    \addtocounter{footnote}{-1}%
+    \endgroup
+}
+
+\linespread{1.2} 
+
+\usepackage[all]{xy}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes, positioning}
+\tikzset{
+	arr/.style={-stealth,shorten >=4.2mm,shorten <=4.2mm,thick}, %
+	dot/.style={rotate=-45,font=\LARGE}, %
+	dot2/.style={rotate=45,font=\LARGE} %
+}
+
+
+\newcommand{\norm}[1]{\ensuremath{\left\lVert #1 \right\rVert}}
+\newcommand{\oball}[2]{\ensuremath{\mathcal{B}_{#2} (#1)}}
+\newcommand{\cball}[2]{\ensuremath{\mathcal{B}_{#2} [#1]}}
+\newcommand{\clos}[1]{\ensuremath{\overline{#1}}}
+\newcommand{\bdry}[1]{\ensuremath{\partial #1}}
+\newcommand{\intr}[1]{\ensuremath{{#1}^\circ}}
+\newcommand{\diff}{\mathop{}\!\mathrm{d}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\power}[1]{\ensuremath{\langle #1 \rangle}}
+
+
+\makeindex
+
+\input{newdefs.tex}
+\input{colorboxes.tex}
+
+\begin{document}
+\title{ODE Meeting Notes Collection}
+\author{Eason Li}
+\date{2025 W}
+\maketitle
+
+\newpage
+
+\end{document}
