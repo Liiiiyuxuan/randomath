@@ -1,0 +1,183 @@
+\documentclass{article}
+% \synctex=1
+% \newcommand{\fix}[1]{{\bf *** #1 ***}}
+\usepackage{amsfonts, amsmath, comment, hyperref, fontawesome5}
+\usepackage{mathrsfs, amssymb, tikz-cd, booktabs}
+\usepackage{stmaryrd, siunitx, lmodern, multicol, adjustbox}
+\usepackage{multirow, pifont, soul, enumerate}
+\usepackage{latexsym, cancel, tikz, xcolor, url, color}
+\usepackage{listings, amsthm}
+\usepackage{imakeidx}
+\usepackage[ruled,linesnumbered,boxruled,slide]{algorithm2e}
+\usepackage[symbol]{footmisc}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+\usepackage{harmony}
+\usepackage{hieroglf}
+\usepackage[noend]{algpseudocode}
+\usepackage{colortbl}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\usepackage[OT2,OT1]{fontenc}
+\def\SH{\mbox{\fontencoding{OT2}\selectfont\char88}}
+
+\newcommand\blfootnote[1]{%
+    \begingroup
+    \renewcommand\thefootnote{}\footnote{#1}%
+    \addtocounter{footnote}{-1}%
+    \endgroup
+}
+
+\linespread{1.2} 
+
+\usepackage[all]{xy}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes, positioning}
+\tikzset{
+	arr/.style={-stealth,shorten >=4.2mm,shorten <=4.2mm,thick}, %
+	dot/.style={rotate=-45,font=\LARGE}, %
+	dot2/.style={rotate=45,font=\LARGE} %
+}
+
+\usepackage{amssymb}
+\usepackage[many]{tcolorbox}
+\newtcolorbox[auto counter,number within=section]{Question}[2][]{%
+    colback=green!5,
+    colframe=green!35!black,
+    colbacktitle=green!35!black,
+    coltitle=white,
+    fonttitle=\bfseries, 
+    title=Question~\thetcbcounter.\ #2,
+    enhanced,
+    attach boxed title to top left={yshift=-2mm, xshift=0.5cm},%
+    #1% 
+}
+
+\lstset{
+    basicstyle=\ttfamily, % Set the default font for listings to typewriter
+    mathescape=true,      % Allows escaping to LaTeX math mode within $$
+    columns=fullflexible,
+    breaklines=true,      % Set automatic line breaking
+    captionpos=b,         % Sets the caption-position to bottom
+    xleftmargin=\parindent,
+    numbers=left,         % Line numbers on left
+    numberstyle=\small,   % Line numbers styling
+    numbersep=5pt,
+    escapeinside={(*@}{@*)} % for escaping to LaTeX inside your code
+}
+
+
+\makeindex
+
+\input{newdefs.tex}
+\input{colorboxes.tex}
+\input{codestyle.tex}
+
+\begin{document}
+\title{CS 240 with Olga Veksler}
+\author{Eason Li}
+\date{2025 W}
+\maketitle
+
+
+\tableofcontents
+
+
+\newpage
+
+% *
+% !
+% ?
+% TODO 
+% FIXME: 
+% // 
+
+\begin{center}
+    \add{Lecture 1 - Tuesday, January 07}
+\end{center}
+
+\section{Introduction and Asymptotic Analysis} 
+
+\subsection{What is this course about?} 
+
+\begin{itemize}
+    \item When first learn to program, we emphasize \textcolor{blue}{correctness}; 
+    \item We also concerned with \textcolor{blue}{efficiency}; \begin{itemize}
+        \item Processor time; 
+        \item Memory space. 
+    \end{itemize}
+    \item We study efficient methods of \textcolor{blue}{storing}, \textcolor{blue}{accessing}, and \textcolor{blue}{organizing} large collections of data: Some typical operations are \begin{itemize}
+        \item inserting new data items; 
+        \item deleting data items.
+    \end{itemize}
+    \item We also cover new ADTs and how to implement ADT efficiently using appropriate data structures. 
+    \item We will also cover algorithms solving problems in data management, such as sorting, pattern matching, and compression. 
+\end{itemize}
+
+\subsection{Algorithm Design}
+
+\begin{deff}[Problem \index{Problem}].
+    A \textbf{problem} is a description of input and required output. 
+\end{deff}
+
+\begin{deff}[Problem Instance \index{Problem Instance}].
+    A \textbf{problem instance} is one possible input for specific problem. 
+\end{deff}
+
+\begin{deff}[Algorithm \index{Algorithm}].
+    An \textbf{algorithm} us a step-by-step process (can be described in finite length) for carrying out a series of computations, given an arbitrary instance $I$. 
+\end{deff}
+
+\begin{deff}[Solving \index{Solving}].
+    An algorithm $A$ \textbf{solves} problem $\Pi$ if for every instance $I$ of $\Pi$, $A$ computes a valid output for instance $I$ in finite time. 
+\end{deff}
+
+\begin{deff}[Program \index{Program}].
+    A \textbf{program} is an \textit{implementation} of an algorithm using a specific computer language. 
+\end{deff}
+
+\begin{discovery}[].
+    In this course, we emphasize on algorithms as opposed to programs. 
+\end{discovery}
+
+\begin{thmm}[].
+    In general, from problem $\Pi$ to program that solves it, we care about \begin{enumerate}
+        \item \textcolor{magenta}{\textbf{Algorithm Design:}} design algorithms that solves $\Pi$; 
+        \item \textcolor{magenta}{\textbf{Algorithm Analysis:}} aseess \textit{correctness} and \textit{efficiency} of algorithms; 
+        \item \textcolor{magenta}{\textbf{Implementation:}} If acceptable (correct and efficient), implement algorithms, while multiple implementations are possible; 
+        \item If multiple acceptable algorithms/ implementations are present, run experiments to determine a better solution. 
+    \end{enumerate}
+    \hl{CS240 cares about the first two steps}. 
+\end{thmm}
+
+\subsection{Pseudocode}
+
+\begin{deff}[Pseudocode \index{Pseudocode}].
+    \textbf{Pseudocode} is a method of communication algorithm to a human. 
+\end{deff}
+
+\begin{exampleee}[Example of a Pseudocode].
+    
+\end{exampleee}
+
+\begin{algorithm}[H] \KwData{this text} \KwResult{how to write algorithm with \LaTeX2e } initialization\; \While{not at end of this document}{ read current\; \eIf{understand}{ go to next section\; current section becomes this one\; }{ go back to the beginning of current section\; } } \caption{How to write algorithms} \end{algorithm}
+
+\subsection{Measuring Efficiency} 
+
+\begin{deff}[Efficiency \index{Efficiency}].
+    Efficiency refers to \begin{itemize}
+        \item Running Time: aka  ``Time Complexity'', the amount of time a program takes to run; 
+        \item Auxiliary Space: aka ``Space Complexity'', the amount of additional memory a program requires. 
+    \end{itemize} 
+\end{deff}
+
+
+
+\end{document}
