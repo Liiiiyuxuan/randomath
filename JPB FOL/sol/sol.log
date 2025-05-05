@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.19)  2 MAY 2025 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.19)  4 MAY 2025 12:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1308,23 +1308,23 @@ Package xypdf Info: Line width: 0.39998pt on input line 92.
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 235.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}] [5] [6] [7] (./sol.aux)
+) [4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}] [5] [6] [7] [8] (./sol.aux)
 Package rerunfilecheck Info: File `sol.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 43942 strings out of 476025
- 915533 string characters out of 5790017
+ 43943 strings out of 476025
+ 915539 string characters out of 5790017
  1869388 words of memory out of 5000000
  63609 multiletter control sequences out of 15000+600000
  550241 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,17n,118p,3286b,989s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb>
-Output written on sol.pdf (7 pages, 173397 bytes).
+Output written on sol.pdf (8 pages, 174798 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
