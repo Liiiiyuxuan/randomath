@@ -309,8 +309,37 @@
 \noindent \textbf{Exercise 7.3} : 
 
 \begin{solution}
-    \texttt{(c) $\Rightarrow$ (d)}: This is partial fraction. 
-    \texttt{(d) $\Rightarrow$ (c)}: See hint. 
+    \texttt{(a) $\Rightarrow$ (c)}: We define 
+    \[ Q(x) := 1 + c_{d-1} x + \cdots + c_0 x^d \]
+    and 
+    \[ P(x) := \left( \sum_{n \geq 0} f(x) x^n \right) \cdot Q(x) \]
+    Thus it now suffices to show that $P(x)$ is a polynomial of degree at most $d - 1$. We notice that 
+    \[ [x^m] P(x) = \sum_{i = 0}^{\min(m, d)} c_{d - i} \cdot f(m - i) \]
+    Given that $f(n)$ satisfies a linear recurrence:
+    \[
+    f(n + d) + c_{d-1} f(n + d - 1) + \cdots + c_0 f(n) = 0 \quad \text{for all } n \geq 0
+    \]
+    Then, for any $m \geq d$, we have:
+    \[ f(m) + c_{d-1} f(m - 1) + \cdots + c_0 f(m - d) = 0 \]
+    This implies:
+    \[ [x^m] P(x) = f(m) + c_{d-1} f(m - 1) + \cdots + c_0 f(m - d) = 0 \qquad \text{for all } m \geq d \] 
+    thus proving that $P(x)$ has degree at most $d - 1$. For the other direction, \texttt{(c) $\Rightarrow$ (a)}: Suppose we know that 
+    \[ \sum_{n \geq 0} f(n) x^n = \frac{P(x)}{Q(x)} \] 
+    Hence we know 
+    \[ [x^i] Q(x) \sum_{n \geq 0} f(n) x^n \] 
+    Suppose 
+    \[ Q(x) = c_d x^0 + c_{d-1} x + \cdots + c_0 x^d \]
+    where $c_d = 1$ since $Q(0) = 1$, we now have that 
+    \begin{align*}
+        [x^i] Q(x) \sum_{n \geq 0} f(n) x^n
+        & = [x^i] \sum_{j = 0}^d c_{d-j} x^j \sum_{n \geq 0} f(n) x^n \\ 
+        & = \sum_{j = 0}^d c_{d-j} [x^{i-j}] \sum_{n \geq 0} f(n) x^n = \sum_{j = 0}^d c_{d-j} f(i-j)
+    \end{align*}
+    Moreover, given that $P(x)$ is a polynomial of degree at most $d-1$, we know that 
+    \[ [x^d] P(x) = 0 \]
+    which implies that 
+    \[ [x^d] Q(x) \sum_{n \geq 0} f(n) x^n = \sum_{j = 0}^d c_{d-j} f(d-j) = 0 \]
+    as desired. 
 \end{solution}
 
 \newpage
